@@ -1,4 +1,4 @@
-1. Creare un nuovo database chiamato "prodotto_db".
+1. Creare un nuovo database chiamato "mnemosine_db".
 2. Creare una tabella chiamata "prodotto" che conterrà tutti i campi necessari per descrivere un prodotto, ad esempio: id, nome, descrizione, prezzo, quantità.
 3. Creare una tabella chiamata "attributo" che conterrà tutti i campi necessari per descrivere gli attributi di un prodotto, ad esempio: id, nome, descrizione, valore.
 4. Creare una relazione tra le tabelle "prodotto" e "attributo" utilizzando una chiave esterna. Ad esempio, la tabella "prodotto" potrebbe avere un campo chiamato "attributo_id" che si riferisce all'ID della tabella "attributo".
