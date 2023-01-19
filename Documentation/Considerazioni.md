@@ -13,7 +13,7 @@ Nota che la primary key è composta da prodotto_id e attributo_id in modo che no
 
 
 
-E se usassi un modello EAV??
+*E se usassi un modello EAV??*
 Il modello Entità-Attributo-Valore (EAV) è un modello di database utilizzato per rappresentare informazioni flessibili e dinamiche. In questo modello, gli attributi di un'entità sono rappresentati in modo indipendente dall'entità stessa, permettendo l'aggiunta o la rimozione di attributi senza dover modificare la struttura dell'entità.
 
 Se decidi di utilizzare il modello EAV per il tuo database, ciò potrebbe avere un impatto sul tuo codice in quanto potrebbe essere necessario scrivere query più complesse per recuperare e gestire i dati.
@@ -22,4 +22,4 @@ Per accedere ai dati, ad esempio, potresti dover eseguire più query per recuper
 
 Per quanto riguarda l'astrazione, potrebbe essere necessario creare una classe per rappresentare l'entità, una classe per rappresentare gli attributi e una classe per rappresentare i valori degli attributi, in modo da poter accedere e gestire i dati in modo più flessibile.
 
-In generale, utilizzare il modello EAV richiede una maggiore complessità nella progettazione e nello sviluppo del database e del codice, ma può essere utile in casi in cui le esigenze dei dati sono in continua evoluzione e cambiamento
+**In generale, utilizzare il modello EAV richiede una maggiore complessità nella progettazione e nello sviluppo del database e del codice**, ma può essere utile in casi in cui le esigenze dei dati sono in continua evoluzione e cambiamento. Se i tuoi dati sono relativamente stabili e non cambiano molto nel tempo, potresti preferire utilizzare un modello relazionale tradizionale come il modello ER.
