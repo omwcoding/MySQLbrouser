@@ -29,6 +29,18 @@ CREATE TABLE valore (
     FOREIGN KEY (attributo_id) REFERENCES attributo(id)
 );
 
---INSERT INTO attributo (nome, tipo) VALUES ('colore', 'stringa');
---INSERT INTO value (prodotto_id, attributo_id, valore) VALUES (1, 1, 'rosso');
+CREATE TABLE prodotto_attributo_valore (
+    prodotto_id INT NOT NULL,
+    attributo_id INT NOT NULL,
+    valore_id INT NOT NULL,
+    PRIMARY KEY (prodotto_id, attributo_id, valore_id),
+    FOREIGN KEY (prodotto_id) REFERENCES prodotto(id),
+    FOREIGN KEY (attributo_id) REFERENCES attributo(id),
+    FOREIGN KEY (valore_id) REFERENCES valore(id)
+);
+
+--INSERT INTO prodotto_attributo_valore (prodotto_id, attributo_id, valore_id) VALUES (1, 1, 1);
+--INSERT INTO valore (valore) VALUES ('rosso');
+
+
 
