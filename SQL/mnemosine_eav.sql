@@ -6,6 +6,8 @@ USE mnemosine_db;
 CREATE TABLE prodotto (
     id INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
+    prezzo_finale DECIMAL(10,2),
+
     PRIMARY KEY (id)
 );
 
@@ -13,6 +15,7 @@ CREATE TABLE attributo (
     id INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     tipo ENUM('stringa','numero','bool','data') NOT NULL,
+
     PRIMARY KEY (id)
 );
 
@@ -20,27 +23,33 @@ CREATE TABLE valore (
     id INT NOT NULL AUTO_INCREMENT,
     prodotto_id INT NOT NULL,
     attributo_id INT NOT NULL,
-    valore VARCHAR(255),
+    valore_text VARCHAR(255),
     valore_numero DECIMAL(10,2),
     valore_bool TINYINT(1),
     valore_data DATE,
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE prodotto_attributo (
+    prodotto_id INT NOT NULL,
+    attributo_id INT NOT NULL,
+
+    PRIMARY KEY (prodotto_id, attributo_id),
     FOREIGN KEY (prodotto_id) REFERENCES prodotto(id),
     FOREIGN KEY (attributo_id) REFERENCES attributo(id)
 );
 
-CREATE TABLE prodotto_attributo_valore (
-    prodotto_id INT NOT NULL,
+
+--Dubbio su questa tabella
+CREATE TABLE attributo_valore (
     attributo_id INT NOT NULL,
     valore_id INT NOT NULL,
-    PRIMARY KEY (prodotto_id, attributo_id, valore_id),
-    FOREIGN KEY (prodotto_id) REFERENCES prodotto(id),
+
+    PRIMARY KEY (attributo_id, valore_id),
     FOREIGN KEY (attributo_id) REFERENCES attributo(id),
     FOREIGN KEY (valore_id) REFERENCES valore(id)
 );
 
---INSERT INTO prodotto_attributo_valore (prodotto_id, attributo_id, valore_id) VALUES (1, 1, 1);
---INSERT INTO valore (valore) VALUES ('rosso');
 
 
 
