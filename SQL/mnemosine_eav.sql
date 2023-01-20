@@ -24,7 +24,8 @@ CREATE TABLE valore (
     prodotto_id INT NOT NULL,
     attributo_id INT NOT NULL,
     valore_text VARCHAR(255),
-    valore_numero DECIMAL(10,2),
+    valore_prezzo DECIMAL(10,2),
+    valore_int INT,
     valore_bool TINYINT(1),
     valore_data DATE,
     PRIMARY KEY (id)
