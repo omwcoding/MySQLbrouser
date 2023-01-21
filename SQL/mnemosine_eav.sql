@@ -40,8 +40,6 @@ CREATE TABLE prodotto_attributo (
     FOREIGN KEY (attributo_id) REFERENCES attributo(id)
 );
 
-
---Dubbio su questa tabella
 CREATE TABLE attributo_valore (
     attributo_id INT NOT NULL,
     valore_id INT NOT NULL,
@@ -50,7 +48,3 @@ CREATE TABLE attributo_valore (
     FOREIGN KEY (attributo_id) REFERENCES attributo(id),
     FOREIGN KEY (valore_id) REFERENCES valore(id)
 );
-
-
-
-
