@@ -6,15 +6,14 @@ USE mnemosine_db;
 CREATE TABLE prodotto (
     id INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
-    prezzo_finale DECIMAL(10,2),
-
+    
     PRIMARY KEY (id)
 );
 
 CREATE TABLE attributo (
     id INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
-    tipo ENUM('stringa','numero','bool','data') NOT NULL,
+    tipo ENUM('stringa','numero','bool','data', 'decimal') NOT NULL,
 
     PRIMARY KEY (id)
 );
