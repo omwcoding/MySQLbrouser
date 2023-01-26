@@ -28,6 +28,7 @@ CREATE TABLE valore (
     valore_int INT,
     valore_bool TINYINT(1),
     valore_data DATE,
+    
     PRIMARY KEY (id)
 );
 
