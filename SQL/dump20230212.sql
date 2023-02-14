@@ -1,4 +1,4 @@
--- Active: 1672329880844@@127.0.0.1@3306@mnemosine_db
+-- Active: 1676405941074@@db4free.net@3306@budb01
 
 DROP DATABASE budb01;
 CREATE DATABASE budb01;
@@ -21,14 +21,10 @@ CREATE TABLE attributo (
 
 CREATE TABLE valore (
     id INT NOT NULL AUTO_INCREMENT,
-    prodotto_id INT NOT NULL,
-    attributo_id INT NOT NULL,
-    valore_text VARCHAR(255),
-    valore_prezzo DECIMAL(10,2),
-    valore_int INT,
-    valore_bool TINYINT(1),
-    valore_data DATE,
-    
+    valore_char VARCHAR(255),
+    tipo_valore VARCHAR(121),
+
+ 
     PRIMARY KEY (id)
 );
 
